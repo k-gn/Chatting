@@ -1,0 +1,40 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+TextField {
+	-fx-border-color: #c8c8c8; 
+	-fx-border-width: 1.5;
+}
+
+TextArea {
+	-fx-border-color: #c8c8c8; 
+	-fx-border-width: 1.5;
+}
+
+ListView {
+	-fx-border-color: #c8c8c8; 
+	-fx-border-width: 1.5;
+}
+
+TextField:focused {
+	-fx-border-color: skyblue;
+}
+
+Button {
+	-fx-effect: dropshadow(three-pass-box, rgba(1,1,0,0.7), 10, 0, 5, 3);
+}
+
+Button:pressed {
+	-fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 10, 0, 3, 3);
+}
+
+Button:hover {
+	-fx-cursor: hand;
+}
+
+#closeBtn {
+	-fx-effect: none;
+}
+
+#closeBtn:pressed {
+	-fx-effect: none;
+}

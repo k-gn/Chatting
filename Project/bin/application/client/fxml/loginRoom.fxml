@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="496.0" prefWidth="343.0" style="-fx-background-color: #ddebf7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.client.controller.LoginController">
+   <children>
+      <StackPane fx:id="fxMainStack" layoutX="10.0" layoutY="10.0" prefHeight="475.0" prefWidth="323.0">
+         <children>
+         <!-- 아이디 비밀번호 찾기창 -->
+            <Pane fx:id="fxFindPane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="475.0" prefWidth="323.0" style="-fx-background-color: #ddebf7;">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="84.0" layoutX="120.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../image/find.png" />
+                           </image>
+                        </ImageView>
+                        <Button id="findIdBtn" fx:id="fxFindIdBtn" layoutX="67.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="23.0" prefWidth="189.0" style="-fx-background-color: #333e4f;" text="아이디 찾기" textFill="#d4d9e1">
+                           <font>
+                              <Font name="Malgun Gothic" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button id="findPwBtn" fx:id="fxFindPwBtn" layoutX="67.0" layoutY="218.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="23.0" prefWidth="189.0" style="-fx-background-color: #333e4f;" text="비밀번호 찾기" textFill="#d4d9e1">
+                           <font>
+                              <Font name="Malgun Gothic" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button id="goLogin2" fx:id="fxGoLogin2" layoutX="82.0" layoutY="393.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="20.0" prefWidth="159.0" style="-fx-background-radius: 5; -fx-background-color: #ddebf7;" text="로그인 홈" textAlignment="CENTER" textFill="#9fa3a7">
+                           <font>
+                              <Font name="Malgun Gothic" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <!-- 회원가입 창 -->
+            <Pane fx:id="fxSignPane" prefHeight="475.0" prefWidth="328.0" style="-fx-background-color: #ddebf7;">
+               <children>
+                  <AnchorPane prefHeight="475.0" prefWidth="333.0" style="-fx-background-color: #ddebf7;">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="39.0" layoutY="-1.0" prefHeight="475.0" prefWidth="248.0">
+                           <children>
+                              <ImageView fitHeight="44.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../image/signup.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="30.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <TextField fx:id="fxName" prefHeight="27.0" prefWidth="163.0" promptText="이름" style="-fx-border-color: #c8c8c8; -fx-border-width: 1.5;">
+                                 <font>
+                                    <Font name="NanumGothic" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <AnchorPane prefHeight="6.0" prefWidth="245.0">
+                                 <children>
+                                    <TextField fx:id="fxSignID" layoutX="10.0" layoutY="1.0" prefHeight="27.0" prefWidth="190.0" promptText="아이디" style="-fx-border-color: #c8c8c8; -fx-border-width: 1.5;">
+                                       <font>
+                                          <Font name="NanumGothic" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button id="idCheck" fx:id="fxIdCheckBtn" layoutX="204.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="44.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="체크" textAlignment="CENTER" textFill="#d4d9e1">
+                                       <font>
+                                          <Font name="Malgun Gothic" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                              <PasswordField fx:id="fxSignPW" prefHeight="27.0" prefWidth="197.0" promptText="비밀번호" style="-fx-border-color: #c8c8c8; -fx-border-width: 1.5;">
+                                 <font>
+                                    <Font name="NanumGothic" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <PasswordField fx:id="fxSignPWCheck" prefHeight="27.0" prefWidth="197.0" promptText="비밀번호 확인" style="-fx-border-color: #c8c8c8; -fx-border-width: 1.5;">
+                                 <font>
+                                    <Font name="NanumGothic" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <TextField fx:id="fxSignEmail" onKeyPressed="#handleKeyAction" prefHeight="27.0" prefWidth="197.0" promptText="이메일" style="-fx-border-color: #c8c8c8; -fx-border-width: 1.5;">
+                                 <font>
+                                    <Font name="NanumGothic" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button id="signUp" fx:id="fxSignUpBtn2" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="190.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="회 원 가 입" textAlignment="CENTER" textFill="#d4d9e1">
+                                 <font>
+                                    <Font name="Malgun Gothic" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="fxSignUpCheckLbl" alignment="CENTER" prefHeight="20.0" prefWidth="230.0" textFill="#fc1e01">
+                                 <font>
+                                    <Font name="Malgun Gothic" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="80.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button id="goLogin1" fx:id="fxGoLogin1" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="159.0" style="-fx-background-radius: 5; -fx-background-color: #ddebf7;" text="로그인 홈" textAlignment="CENTER" textFill="#9fa3a7">
+                                 <font>
+                                    <Font name="Malgun Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <!-- 로그인 창 -->
+            <Pane fx:id="fxLogPane" prefHeight="475.0" prefWidth="301.0" style="-fx-background-color: #ddebf7;">
+               <children>
+                  <TextField id="idText" fx:id="fxIdText" layoutX="63.0" layoutY="179.0" prefHeight="27.0" prefWidth="197.0" promptText="아이디" style="-fx-border-color: #c8c8c8; -fx-border-width: 1.5;">
+                     <font>
+                        <Font name="NanumGothic" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button id="loginBtn" fx:id="fxLoginBtn" layoutX="67.0" layoutY="248.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="190.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="로그인" textAlignment="CENTER" textFill="#e0dbd5">
+                     <font>
+                        <Font name="Malgun Gothic" size="12.0" />
+                     </font>
+                  </Button>
+                  <PasswordField id="pwText" fx:id="fxPwText" layoutX="63.0" layoutY="210.0" onKeyPressed="#handleKeyAction" prefHeight="27.0" prefWidth="197.0" promptText="비밀번호" style="-fx-border-color: #c8c8c8; -fx-border-width: 1.5;">
+                     <font>
+                        <Font name="NanumGothic" size="12.0" />
+                     </font>
+                  </PasswordField>
+                  <ImageView fitHeight="100.0" fitWidth="111.0" layoutX="112.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../image/ch.png" />
+                     </image>
+                  </ImageView>
+                  <FlowPane alignment="CENTER" layoutX="10.0" layoutY="378.0" prefHeight="84.0" prefWidth="302.0">
+                     <children>
+                        <Button id="findBtn" fx:id="fxFindBtn" ellipsisString="" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #ddebf7;" text="아아디/비밀번호 찾기" textFill="#9fa3a7">
+                           <font>
+                              <Font name="Malgun Gothic" size="11.0" />
+                           </font>
+                        </Button>
+                        <Separator opacity="0.69" orientation="VERTICAL" prefHeight="3.0" prefWidth="3.0">
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </Separator>
+                        <Button id="signUpBtn" fx:id="fxSignUpBtn" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #ddebf7;" text="회원가입" textFill="#9fa3a7">
+                           <font>
+                              <Font name="NanumGothic" size="11.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </FlowPane>
+                  <CheckBox fx:id="fxRememberId" layoutX="110.0" layoutY="291.0" mnemonicParsing="false" text="아이디 기억하기">
+                     <font>
+                        <Font name="Malgun Gothic" size="11.0" />
+                     </font>
+                  </CheckBox>
+                  <Label fx:id="fxCheckLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="315.0" prefHeight="31.0" prefWidth="256.0" style="-fx-font-weight: bold;" textAlignment="CENTER" textFill="#fc003b">
+                     <font>
+                        <Font name="Malgun Gothic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

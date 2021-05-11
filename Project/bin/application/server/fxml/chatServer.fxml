@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="401.0" prefWidth="520.0" style="-fx-background-color: #ddebf7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.server.controller.ServerController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="375.0" prefWidth="364.0" style="-fx-border-color: #c8c8c8;">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="425.0" text="로 그" textFill="#043579">
+               <font>
+                  <Font name="NanumGothic" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="logArea" prefHeight="448.0" prefWidth="362.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextArea>
+            <FlowPane alignment="CENTER" prefHeight="52.0" prefWidth="375.0" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="388.0" layoutY="14.0" prefHeight="375.0" prefWidth="118.0" style="-fx-border-color: #c8c8c8;">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="425.0" text="접 속 자" textFill="#073375">
+               <font>
+                  <Font name="NanumGothic" size="13.0" />
+               </font>
+            </Label>
+            <ListView fx:id="connectArea" prefHeight="350.0" prefWidth="105.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </ListView>
+            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="199.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="저장하기" textAlignment="CENTER" textFill="#d4d9e1">
+               <font>
+                  <Font name="Malgun Gothic" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="serverBtn" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="121.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="시작하기" textAlignment="CENTER" textFill="#d4d9e1">
+               <font>
+                  <Font name="Malgun Gothic" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="411.0" prefWidth="441.0" style="-fx-background-color: #ddebf7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.client.controller.ChatController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="384.0" prefWidth="131.0" style="-fx-border-color: #c8c8c8;">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="189.0" text="참 여 자" textFill="#073375">
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </Label>
+            <ListView fx:id="fxChatUserList" prefHeight="321.0" prefWidth="129.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </ListView>
+            <Button fx:id="fxWhisperBtn" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="28.0" prefWidth="167.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="귓 속 말" textAlignment="CENTER" textFill="#d4d9e1">
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="fxFileSendBtn" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="28.0" prefWidth="167.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="파일 전송" textAlignment="CENTER" textFill="#d4d9e1">
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="fxCoerceOutBtn" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="28.0" prefWidth="167.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="강제 퇴장" textAlignment="CENTER" textFill="#d4d9e1">
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="fxQuitBtn" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="22.0" prefWidth="167.0" style="-fx-background-radius: 5; -fx-background-color: #333e4f;" text="나 가 기" textAlignment="CENTER" textFill="#d4d9e1">
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="153.0" layoutY="14.0" prefHeight="384.0" prefWidth="274.0" style="-fx-border-color: #c8c8c8;">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="272.0" text="채 팅 창" textFill="#073375">
+               <font>
+                  <Font name="Malgun Gothic" size="12.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="fxChatArea" prefHeight="334.0" prefWidth="272.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextArea>
+            <TextField fx:id="fxSendField" onKeyPressed="#handleKeyPress" prefHeight="23.0" prefWidth="289.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

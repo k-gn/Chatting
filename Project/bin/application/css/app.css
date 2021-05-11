@@ -1,0 +1,42 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+TextField {
+	-fx-border-color: #c8c8c8; 
+	-fx-border-width: 1.5;
+}
+
+TextArea {
+	-fx-border-color: #c8c8c8; 
+	-fx-border-width: 1.5;
+}
+
+ListView {
+	-fx-border-color: #c8c8c8; 
+	-fx-border-width: 1.5;
+}
+
+TextField:focused {
+	-fx-border-color: skyblue;
+}
+
+Button:hover {
+	-fx-cursor: hand;
+}
+
+.separator *.line { 
+	-fx-border-width: 0.5px;
+	-fx-border-color: #9fa3a7;
+}
+
+#loginBtn, #signUp, #findIdBtn, #findPwBtn, #idFindConfirm, #findPwConfirm, #idConfirmBtn, 
+#pwResetConfirmBtn, #pwConfirmBtn, #confirmBtn, #idCheck, #acceptBtn, #cancelBtn, #fileFindBtn,
+#fileSendBtn, #closeBtn  {
+	-fx-effect: dropshadow(three-pass-box, rgba(1,1,0,0.7), 10, 0, 5, 3);
+}
+
+#loginBtn:pressed , #signUp:pressed , #findIdBtn:pressed, #findPwBtn:pressed, #idFindConfirm:pressed, 
+#findPwConfirm:pressed, #idConfirmBtn:pressed, #pwResetConfirmBtn:pressed, #pwConfirmBtn:pressed, #confirmBtn:pressed, 
+#idCheck:pressed, #acceptBtn:pressed, #cancelBtn:pressed, #fileFindBtn:pressed, #fileSendBtn:pressed, #closeBtn:pressed {
+	-fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 10, 0, 3, 3);
+}
+
