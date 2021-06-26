@@ -1,2 +1,2 @@
-# Chatting
+# Chatting project
 Chatting project
